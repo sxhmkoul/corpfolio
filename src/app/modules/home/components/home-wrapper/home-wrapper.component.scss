@@ -3,3 +3,18 @@
   overflow-y: auto;
   height: 100vh;
 }
+
+app-section.first {
+  h1 {
+    font-size: 7rem;
+    text-wrap: wrap;
+    width: 100%;
+    line-height: 2;
+    text-align: center;
+  }
+
+  app-button {
+    display: flex;
+    justify-content: center;
+  }
+}
