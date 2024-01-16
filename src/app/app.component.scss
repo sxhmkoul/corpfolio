@@ -1,12 +1,27 @@
 .master-bg {
-  background-color: #e5e5f7;
-  opacity: 0.8;
-  background-size: 40px 40px;
-  background-image: repeating-linear-gradient(
-    0deg,
-    #444cf7,
-    #444cf7 1px,
-    #e5e5f7 1px,
-    #e5e5f7
-  );
+  background-color: black;
+  opacity: 0.9;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+
+  .screen {
+    width: 100%;
+
+    @media (min-width: 640px) {
+      width: 100%; /* Equivalent to sm:w-[80%] */
+    }
+
+    background-color: white; /* Equivalent to bg-white */
+    // top: 30px; /* Equivalent to top-[30px] */
+    display: block; /* Equivalent to block */
+    position: relative; /* Equivalent to relative */
+    border-width: 3px; /* Equivalent to border-[3px] */
+    border-color: black; /* Equivalent to border-black */
+    border-radius: 0.25rem; /* Equivalent to rounded-lg */
+    justify-content: center; /* Equivalent to justify-center */
+    display: flex; /* Equivalent to flex */
+    margin-left: auto; /* Equivalent to mx-auto */
+    margin-right: auto; /* Equivalent to mx-auto */
+  }
 }

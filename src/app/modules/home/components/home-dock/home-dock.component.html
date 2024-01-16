@@ -1,0 +1,40 @@
+<div class="dock-container">
+  @for (icon of pinnedApps; track $index) {
+  <div class="app-icon">
+    <img
+      [src]="'../../../../../assets/icons/' + icon.path + '.png'"
+      [alt]="icon.name"
+      alt=""
+    />
+    @if (icon.active) {
+    <div class="active"></div>
+    }
+  </div>
+  }
+  <div class="divider hide-lg"></div>
+  @for (icon of openApps; track $index) {
+  <div class="app-icon hide-lg">
+    <img
+      [src]="'../../../../../assets/icons/' + icon.path + '.png'"
+      [alt]="icon.name"
+      alt=""
+    />
+    @if (icon.active) {
+    <div class="active"></div>
+    }
+  </div>
+  }
+  <div class="divider hide-lg"></div>
+  @for (icon of minimisedApps; track $index) {
+  <div class="app-icon hide-lg">
+    <img
+      [src]="'../../../../../assets/icons/' + icon.path + '.png'"
+      [alt]="icon.name"
+      alt=""
+    />
+    @if (icon.active) {
+    <div class="active"></div>
+    }
+  </div>
+  }
+</div>

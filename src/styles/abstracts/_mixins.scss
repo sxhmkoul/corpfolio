@@ -1,0 +1,60 @@
+@import "../abstracts/variables";
+
+@mixin flex-container($direction: row, $justify: flex-start, $align: stretch) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin responsive-font(
+  $min-font-size,
+  $max-font-size,
+  $min-viewport-width,
+  $max-viewport-width
+) {
+  font-size: $min-font-size;
+
+  @media screen and (min-width: $min-viewport-width) {
+    font-size: calc(
+      #{$min-font-size} + (#{$max-font-size} - #{$min-font-size}) * ((
+              100vw - #{$min-viewport-width}
+            ) / (#{$max-viewport-width} - #{$min-viewport-width}))
+    );
+  }
+  @media screen and (min-width: $max-viewport-width) {
+    font-size: $max-font-size;
+  }
+}
+
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (max-width: 599px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media (min-width: 600px) and (max-width: 899px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+}
+
+@mixin respond-to($breakpoint, $max: null) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @if $max {
+      @media (min-width: map-get($breakpoints, $breakpoint)) and (max-width: map-get($breakpoints, $max)) {
+        @content;
+      }
+    } @else {
+      @media (min-width: map-get($breakpoints, $breakpoint)) {
+        @content;
+      }
+    }
+  } @else {
+    @warn "Invalid breakpoint: #{$breakpoint}.";
+  }
+}

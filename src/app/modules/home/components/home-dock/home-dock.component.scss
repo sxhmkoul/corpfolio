@@ -1,0 +1,70 @@
+@import "../../../../../styles/utilities/utils";
+@import "../../../../../styles/abstracts/mixins";
+
+:host {
+  position: absolute;
+  bottom: 7px;
+  left: 50%;
+  transform: translate(-50%);
+  @include respond-to(xs,lg){
+  bottom: 25px;
+
+}
+}
+
+.dock-container {
+  display: flex;
+  border: 0.1px solid #6e6e6e;
+  border-radius: 25px;
+  background: transparent;
+  padding: 0.5rem 1rem 0.7rem 1rem;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(1px);
+
+  .app-icon {
+    position: relative;
+    img {
+      height: 80px;
+      transition: transform 0.1s ease-in-out;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .active {
+      position: absolute;
+      bottom: -5;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 5px; /* Adjust the dot size */
+      height: 5px; /* Adjust the dot size */
+      background-color: white; /* Color of the dot */
+      filter: brightness(0.8);
+      border-radius: 50%; /* Make it circular */
+
+      @include respond-to(xs,lg){
+  display: none;
+}
+    }
+  }
+
+  .divider {
+    border: 0.4px solid #ffffff52;
+    margin: 0.3rem 1rem;
+    @include respond-to(xs,lg){
+  display: none;
+}
+}
+
+
+@include respond-to(xs,lg){
+  gap: 1rem;
+  border-radius: 40px;
+    padding: 0.5rem 1rem;
+    backdrop-filter: contrast(0);
+    -webkit-backdrop-filter: contrast(0);
+
+}
+
+}

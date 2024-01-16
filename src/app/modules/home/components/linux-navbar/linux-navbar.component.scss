@@ -1,0 +1,26 @@
+.navbar-container {
+  height: 2rem; /* Equivalent to h-8 */
+  display: flex; /* Equivalent to flex */
+  align-items: center; /* Equivalent to items-center */
+  justify-content: flex-start; /* Equivalent to justify-start */
+  border-color: #000; /* Equivalent to border-black */
+  border-width: 3px; /* Equivalent to border-[3px] */
+  border-top-width: 0; /* Equivalent to border-t-0 */
+  border-right-width: 0; /* Equivalent to border-r-0 */
+  border-left-width: 0; /* Equivalent to border-l-0 */
+
+  .icons {
+    display: flex; /* Equivalent to flex */
+    gap: 0.5rem; /* Equivalent to gap-2 (assuming 0.5rem gap) */
+    margin-left: 1rem;
+
+    .cta {
+      width: 1rem; /* Equivalent to w-4 */
+      height: 1rem; /* Equivalent to h-4 */
+      border-width: 3px; /* Equivalent to border-[3px] */
+      border-color: #000; /* Equivalent to border-black */
+      background-color: #87ceeb; /* Equivalent to bg-sky-300 */
+      border-radius: 9999px;
+    }
+  }
+}

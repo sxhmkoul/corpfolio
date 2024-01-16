@@ -1,16 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
 
 @font-face {
-    font-family: 'Geist';
-    src: url('./assets/fonts/Geist-Bold.woff2') format('woff2');
-    font-weight: 900;
-    font-style: normal;
-  }
+  font-family: "Geist";
+  src: url("./assets/fonts/Geist-Bold.woff2") format("woff2");
+  font-weight: 900;
+  font-style: normal;
+}
 
-  h1 {
-    font-family: 'Geist', sans-serif;
-  }
-  
+h1 {
+  font-family: "Geist", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
